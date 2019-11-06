@@ -5,8 +5,13 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 const Observations = ({ observations }) => {
   var columns = [
     {
-      dataField: 'observed',
+      dataField: 'time',
       text: 'last observed',
+      sort: true
+    },
+    {
+      dataField: 'worker',
+      text: 'observed on',
       sort: true
     },
     {
@@ -18,7 +23,8 @@ const Observations = ({ observations }) => {
   let data = Object.keys(observations).map(workerType => {
     let blob = {
       workerType: workerType,
-      observed: observations[workerType]['collect-software-versions']['iteration-1'].task.runs[0].resolved
+      time: observations[workerType]['collect-software-versions']['iteration-1'].task.runs[0].resolved,
+      worker: observations[workerType]['collect-software-versions']['iteration-1'].task.runs[0].workerId
     };
     Object.keys(observations[workerType]['collect-software-versions']['iteration-1']).forEach(key => {
       if (key.includes('-version')) {
