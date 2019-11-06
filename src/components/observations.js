@@ -90,12 +90,19 @@ const Observations = ({ observations }) => {
     return blob;
   });
   return (
-    <div>
+    <div class="container-fluid">
       <h2>software version observations</h2>
       <BootstrapTable keyField='workerType' data={ versionData } columns={ versionColumns } bootstrap4 />
 
       <h2>bootstrap config observations</h2>
       <BootstrapTable keyField='workerType' data={ configData } columns={ configColumns } bootstrap4 />
+
+      <p>
+        data is harvested using taskcluster tasks defined at: <a href="https://gist.github.com/grenade/a2ff8966607583fbc1944fccc256a80c">https://gist.github.com/grenade/a2ff8966607583fbc1944fccc256a80c</a><br />
+        latest tasks are determined by the task index at: <a href="https://tools.taskcluster.net/index/project.releng.a2ff8966607583fbc1944fccc256a80c.decision">https://tools.taskcluster.net/index/project.releng.a2ff8966607583fbc1944fccc256a80c.decision</a><br />
+        rendering is done using react components at: <a href="https://github.com/grenade/minions-managed">https://github.com/grenade/minions-managed</a><br />
+        pages are hosted using github pages at: <a href="https://github.com/mozilla-releng/OpenCloudConfig/tree/gh-pages">https://github.com/mozilla-releng/OpenCloudConfig/tree/gh-pages</a>
+      </p>
     </div>
   )
 };
