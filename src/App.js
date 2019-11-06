@@ -3,22 +3,8 @@ import Observations from './components/observations';
 import './App.css';
 
 const IndexApi = 'https://index.taskcluster.net/v1';
-//const QueueApi = 'https://queue.taskcluster.net/v1';
 const ArtifactApi = 'https://taskcluster-artifacts.net';
 const RootNamespace = 'project.releng.a2ff8966607583fbc1944fccc256a80c';
-/*
-const versionregex = {
-  'windows-version': /(\d+\.\d+\.\d+)/gm,
-  'python2-version': /(\d+\.\d+\.\d+)/gm,
-  'python3-version': /(\d+\.\d+\.\d+)/gm,
-  'python2-platform-release': /(.*)/gm,
-  'python3-platform-release': /(.*)/gm,
-  'wget-version': /(\d+\.\d+\.\d+)/gm,
-  'hg-version': /(\d+\.\d+\.\d+)/gm,
-  'generic-worker-version': /(\d+\.\d+\.\d+)/gm,
-  'servicepack-major-version': /\d/g,
-}
-*/
 
 class App extends Component {
   constructor() {
